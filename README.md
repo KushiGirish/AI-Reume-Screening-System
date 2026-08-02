@@ -1,0 +1,1 @@
+Developed a web-based resume screening application that accepts PDF resumes, extracts text, detects relevant technical skills, calculates a resume score, identifies missing skills, and provides automated feedback and improvement suggestions.
