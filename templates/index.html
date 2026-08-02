@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Screening System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+ <div class="container">
+    <h1>AI Resume Screening System</h1>
+
+    <p>Upload your resume and receive an AI-based resume analysis.</p>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="resume">
+        <br><br>
+        <button type="submit">Upload Resume</button>
+    </form>
+    {% if message %}
+    <h3>{{ message }}</h3>
+    <h3>Candidate Details</h3>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Phone:</strong> {{ phone }}</p><br>
+    <div class="score-box">
+    <h3>Resume Score</h3>
+
+    <div class="progress">
+        <div class="progress-bar"
+             style="width: {{ score }}%; background: {{ bar_color }};">
+            {{ score }}%
+        </div>
+    </div><br>
+</div>
+    <h3>Resume Strength</h3>
+    <p>{{ strength }}</p> 
+    <br>
+    <h3>Skills Found</h3>
+    <div class="skills-container">
+        {% for skill in found %}
+            <span class = "skill-badge">{{ skill }}</span>
+        {% endfor %}
+    </div>
+    <br>
+
+    <h3>AI Feedback</h3>
+
+    <div class="feedback-box">
+        <p>{{ feedback }}</p>
+    </div>
+
+    <h3>Missing Skills</h3>
+    <div class="missing-container">
+        {% for skill in missing %}
+            <span class="missing-badge">{{ skill }}</span>
+        {% endfor %}
+    </div>
+
+    <h3>Suggestions</h3>
+    <div class = "suggestions-container">
+        {% for suggestion in suggestions %}
+        <span class="suggestions-badge">{{ suggestion }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+ </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    background-color:white;
+    font-family:Arial;
+}
+.container{
+    width:70%;
+    margin:auto;
+    text-align:center;
+    margin-top:80px;
+}
+h1{
+    color:black;
+}
+p{
+    font-size:20px;
+    color:black;
+}
+button{
+    background:blue;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+button:hover{
+    background:blueviolet;
+}
+.score-box{
+    margin-top:20px;
+}
+
+.progress{
+    width:100%;
+    height:35px;
+    background:gray;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    background:green;
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-weight:bold;
+}
+.skills-container{
+    margin-top:10px;
+}
+
+.skill-badge{
+    display:inline-block;
+    background:green;
+    color:white;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.missing-container{
+    margin-top:10px;
+}
+.missing-badge{
+    display:inline-block;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.suggestions-container{
+    margin-top:10px;
+}
+.suggestions-badge{
+    display:inline-block;
+    background:lightseagreen;
+    color:white;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.feedback-box{
+    background:white;
+    padding:15px;
+    border-left:5px solid blue;
+    border-radius:8px;
+    margin-top:20px;
+    text-align:left;
+}
